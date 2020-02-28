@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- <title>Full Width Pics - Start Bootstrap Template</title> -->
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/full-width-pics.css" rel="stylesheet">
+
+</head>
+<style>body {
+  background-color: rgb(18, 26, 47);
+}
+</style>
+
+
+<style>
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  /*border: 2px solid #ccc;*/
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  /*padding: 12px 20px 12px 40px;*/
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+</style>
+
+
+
+<style>
+  body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+p {
+  text-align:center;
+  margin-left: 150px;
+  margin-right: 150px;
+  }
+
+
+</style>
+<body>
+
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <img src= "RefuMe-Logo.png" width: 300px>
+      <!--<a class="navbar-brand" href="#">RefuMe</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">About
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="new2.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="discussion.html">Discussion Forum</a>
+          </li>
+          <li>
+            <form>
+              <input type="text" name="search" placeholder="Search..">
+            </form>
+          </li>
+          <li>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+            <div id="id01" class="modal">
+
+              <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+                </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+              <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="      cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Header - set the background image for the header in the line below -->
+  <!--<header class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1076');">-->
+    <!--<img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt=""> -->
+    <!--<img class="img-fluid d-block mx-auto" src="RefuMe-Logo.png" alt=""> -->
+  <!-- <header>
+    <img src="RefuMe-Logo.png" alt="logo" class="logo">
+  </header> -->
+
+  <!-- Content section -->
+  <section class="py-5">
+    <div class="container">
+      <!-- <h1>Section Heading</h1> -->
+      <!-- <section class="img-fluid d-block mx-auto" src="RefuMe-Logo.png" alt=""></section> -->
+      <br><br><br><br>
+      <p>
+      <img src = "RefuMe-Logo.png" width="150" height="125" class="logo"></p>
+      <p class="lead"><font color="white">Welcome to RefuMe</font></p>
+      <p><font color="white">
+      RefuMe changes lives for good. As the social platform works toward building a just and compassionate community. We help immigrants and refugees of all cultures and beliefs rise up out of poverty and overcome the barriers to self-sufficiency and wellness. </font></p>
+    </div>
+  </section>
+
+  <!-- Image Section - set the background image for the header in the line below -->
+  <!-- <section class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1081');"> -->
+    <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+    <div style="height: 200px;"></div>
+  </section>
+
+  <!-- Content section -->
+  <!-- <section class="py-5">
+    <div class="container">
+      <h1>Section Heading</h1>
+      <p class="lead"><font color="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</font></p>
+      <p><font color="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</font></p>
+    </div>
+  </section> -->
+
+  <!-- Footer -->
+  <!-- <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <! /.container -->
+  <!-- </footer> -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
